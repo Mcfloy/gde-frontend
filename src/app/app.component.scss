@@ -1,0 +1,34 @@
+header {
+  background-color: var(--dark-gray);
+  height: 80px;
+  line-height: 80px;
+}
+
+nav {
+  margin: auto;
+  max-width: var(--large-width);
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    li {
+      display: inline-block;
+      // TODO: Add hover style
+      button {
+        border: none;
+        padding: 10px;
+        max-height: 40px;
+        border-radius: 2px;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+}
+
+main {
+  max-width: var(--large-width);
+  margin: 20px auto 0 auto;
+}

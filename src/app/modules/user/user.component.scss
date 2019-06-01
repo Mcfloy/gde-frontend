@@ -1,0 +1,29 @@
+#user > div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.avatar {
+  border-radius: 64px;
+  font-size: 0;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+h3 {
+  margin: 0;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+h4 {
+  margin: 5px 0;
+}
