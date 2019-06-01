@@ -20,10 +20,20 @@ h3 {
     li {
       display: inline-block;
       vertical-align: middle;
+      img, div {
+        margin-right: 5px;
+        cursor: help;
+      }
     }
   }
 }
 
 h4 {
   margin: 5px 0;
+}
+
+.blankImg {
+  width: 30px;
+  height: 10px;
+  background-color: #DDD;
 }

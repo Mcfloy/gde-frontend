@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'soundpad', loadChildren: './modules/soundpad/soundpad.module#SoundpadModule' },
   { path: 'contact', loadChildren: './modules/contact/contact.module#ContactModule' },
   { path: 'user', loadChildren: './modules/user/user.module#UserModule' },
-  { path: '', component: NotFoundComponent }
+  { path: '*', component: NotFoundComponent }
 ];
 
 @NgModule({

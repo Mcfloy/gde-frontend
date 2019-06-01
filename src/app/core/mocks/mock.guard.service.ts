@@ -34,7 +34,7 @@ export class MockGuardService implements GuardService {
     referringOfficiers: []
   }, {
     id: this.getGeneratedId(), // 6
-    name: 'Grenadiers de la vieille Garde',
+    name: '♛ Grenadiers de la Vieille Garde Impériale ♛',
     position: 4,
     referringOfficiers: []
   }, {
@@ -49,7 +49,7 @@ export class MockGuardService implements GuardService {
     referringOfficiers: []
   }, {
     id: this.getGeneratedId(), // 9
-    name: 'Artillerie de la Garde Impériale',
+    name: '⭙ Artillerie de la Garde Impériale ⭙',
     position: 5,
     referringOfficiers: []
   }, {

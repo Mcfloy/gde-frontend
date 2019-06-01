@@ -11,19 +11,28 @@ export class MockUserService implements UserService {
     name: 'Mar | Persess',
     rankId: 1,
     discordId: 308958114588131328,
-    avatar: 'https://cdn.discordapp.com/avatars/308958114588131328/d8c00316872ff89abfc7a2b6ceb7aa50.webp?size=128'
+    avatar: 'https://cdn.discordapp.com/avatars/308958114588131328/d8c00316872ff89abfc7a2b6ceb7aa50.webp?size=128',
+    ribbonIds: [],
+    decorationIds: [],
+    medalIds: []
   }, {
     id: this.getGeneratedId(),
     name: 'Adj | Omegatho',
     rankId: 13,
     discordId: 0,
-    avatar: 'https://cdn.discordapp.com/avatars/308958114588131328/d8c00316872ff89abfc7a2b6ceb7aa50.webp?size=128'
+    avatar: 'https://cdn.discordapp.com/avatars/308958114588131328/d8c00316872ff89abfc7a2b6ceb7aa50.webp?size=128',
+    ribbonIds: [2, 3, 4],
+    decorationIds: [],
+    medalIds: []
   }, {
     id: this.getGeneratedId(),
     name: 'Ch.2 | Eugène Deflandre',
     rankId: 25,
     discordId: 132756503936499713,
-    avatar: 'https://cdn.discordapp.com/avatars/132756503936499713/74201ef002d680674ebf76da1df7edfb.webp?size=128'
+    avatar: 'https://cdn.discordapp.com/avatars/132756503936499713/74201ef002d680674ebf76da1df7edfb.webp?size=128',
+    ribbonIds: [3, 4],
+    medalIds: [],
+    decorationIds: []
   }];
 
   private getGeneratedId () {

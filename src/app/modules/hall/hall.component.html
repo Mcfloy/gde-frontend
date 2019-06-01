@@ -1,8 +1,6 @@
-<ul class="flex">
-  <li>
-    Persess
-  </li>
-  <li>
-    Omegatho
+<ul class="flex" *ngFor="let ribbonCategory of ribbonCategories">
+  <h4>{{ ribbonCategory.name }}</h4>
+  <li *ngFor="let ribbon of getRibbonsOfCategory(ribbonCategory.id)">
+    <p><b>{{ ribbon.name ? ribbon.name + ' : ' : '' }}</b>{{ ribbon.description }}</p>
   </li>
 </ul>

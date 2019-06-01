@@ -1,5 +1,6 @@
 <div id="regiment" class="text-center">
-  <ul class="flex">
+  <p>Cette page est temporaire, des changements sont attendus.</p>
+  <!-- <ul class="flex">
     <li class="guard">
       <h3>Maréchal d'empire</h3>
       <ul>
@@ -89,5 +90,17 @@
         <li>Rec | Henri</li>
       </ul>
     </li>
-  </ul>
+  </ul> -->
+  <div *ngFor="let position of positions">
+    <ul class="flex">
+      <li class="guard" *ngFor="let guard of getGuardsWithPosition(position)">
+        <h3>{{ guard.name }}</h3>
+        <ul>
+          <li *ngFor="let user of getUsersOfGuard(guard.id)">
+            <a [routerLink]="'/user/'+ user.id">{{ user.name }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </div>
