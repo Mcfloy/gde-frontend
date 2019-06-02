@@ -7,6 +7,9 @@
     <h3>
       {{ user.name }}
       <ul>
+        <li *ngFor="let medal of medals">
+          <img *ngIf="medal.imageURL" [src]="medal.imageURL" [title]="medal.name" />
+        </li>
         <li *ngFor="let ribbon of ribbons">
           <img *ngIf="ribbon.imageURL" [src]="ribbon.imageURL" [title]="ribbon.description" />
           <div class="blankImg" *ngIf="!ribbon.imageURL" [title]="ribbon.description"></div>

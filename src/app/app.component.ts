@@ -10,7 +10,6 @@ export class AppComponent implements OnInit {
   title = 'gde';
 
   constructor (private swUpdate: SwUpdate) { }
-
   ngOnInit () {
     if (this.swUpdate.isEnabled) {
       const availableSub = this.swUpdate.available.subscribe(() => {

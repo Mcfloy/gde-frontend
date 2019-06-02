@@ -10,6 +10,7 @@ import { Ribbon } from 'src/app/shared/models/Ribbon';
 import { Decoration } from 'src/app/shared/models/decoration';
 import { Medal } from 'src/app/shared/models/medal';
 import { RibbonService } from 'src/app/shared/services/ribbon.service';
+import { MedalService } from 'src/app/shared/services/medal.service';
 
 @Component({
   selector: 'app-user',
@@ -30,7 +31,7 @@ export class UserComponent implements OnInit {
     @Inject('GuardService') private readonly guardService: GuardService,
     @Inject('RibbonService') private readonly ribbonService: RibbonService,
     // @Inject('DecorationService') private readonly decorationService: DecorationService,
-    // @Inject('MedalService') private readonly medalService: MedalService
+    @Inject('MedalService') private readonly medalService: MedalService,
     private readonly route: ActivatedRoute,
     private readonly router: Router
   ) { }
@@ -64,6 +65,15 @@ export class UserComponent implements OnInit {
     try {
       this.ribbons = await Promise.all(this.user.ribbonIds.map(async ribbonId => {
         return this.ribbonService.get(ribbonId).toPromise();
+      }));
+    } catch (err) {
+      // TODO: Add a logger for improved debug
+      console.error(err);
+      this.router.navigateByUrl('/regiment');
+    }
+    try {
+      this.medals = await Promise.all(this.user.medalIds.map(async medalId => {
+        return this.medalService.get(medalId).toPromise();
       }));
     } catch (err) {
       // TODO: Add a logger for improved debug

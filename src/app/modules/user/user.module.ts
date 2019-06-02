@@ -6,6 +6,7 @@ import { MockUserService } from 'src/app/core/mocks/mock.user.service';
 import { MockRankService } from 'src/app/core/mocks/mock.rank.service';
 import { MockGuardService } from 'src/app/core/mocks/mock.guard.service';
 import { MockRibbonService } from 'src/app/core/mocks/mock.ribbon.service';
+import { MockMedalService } from 'src/app/core/mocks/mock.medal.service';
 
 @NgModule({
   declarations: [UserComponent],
@@ -17,7 +18,8 @@ import { MockRibbonService } from 'src/app/core/mocks/mock.ribbon.service';
     { provide: 'UserService', useClass: MockUserService },
     { provide: 'RankService', useClass: MockRankService },
     { provide: 'GuardService', useClass: MockGuardService },
-    { provide: 'RibbonService', useClass: MockRibbonService }
+    { provide: 'RibbonService', useClass: MockRibbonService },
+    { provide: 'MedalService', useClass: MockMedalService }
   ]
 })
 export class UserModule { }

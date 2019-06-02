@@ -45,7 +45,9 @@ export class RegimentComponent implements OnInit {
   }
 
   getUsersOfGuard (guardId: number) {
-    return this.users.filter(user => user.guardId === parseInt(guardId.toString(), 10));
+    return this.users.filter(user => user.guardId === parseInt(guardId.toString(), 10)).sort((a, b) => {
+      return a.rankId - b.rankId;
+    });
   }
 
 }

@@ -223,12 +223,12 @@ export class MockRankService implements RankService {
     name: 'Chef de Batterie',
     position: 1,
   }, {
-    id: this.getGeneratedId(), // 45
+    id: this.getGeneratedId(),
     guardId: 9,
     name: 'Canonnier Vétéran',
     position: 2,
   }, {
-    id: this.getGeneratedId(),
+    id: this.getGeneratedId(), // 45
     guardId: 9,
     name: 'Canonnier première classe',
     position: 3,
@@ -247,6 +247,11 @@ export class MockRankService implements RankService {
     guardId: 9,
     name: 'Servent d\'artillerie seconde classe',
     position: 6,
+  }, {
+    id: this.getGeneratedId(), // 49
+    guardId: 4,
+    name: 'Chancelier',
+    position: 5,
   }];
 
   private getGeneratedId () {
