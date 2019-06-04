@@ -21,6 +21,8 @@ h3 {
       display: inline-block;
       vertical-align: middle;
       img, div {
+        max-width: 24px;
+        max-height: 24px;
         margin-right: 5px;
         cursor: help;
       }

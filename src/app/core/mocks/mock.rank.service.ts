@@ -252,7 +252,12 @@ export class MockRankService implements RankService {
     guardId: 4,
     name: 'Chancelier',
     position: 5,
-  }];
+  }, {
+    id: this.getGeneratedId(),
+    guardId: 1,
+    name: 'Chef d\'état-major',
+    position: 2,
+  }, ];
 
   private getGeneratedId () {
     return this.id++;

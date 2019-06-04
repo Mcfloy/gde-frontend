@@ -11,6 +11,7 @@ import { Decoration } from 'src/app/shared/models/decoration';
 import { Medal } from 'src/app/shared/models/medal';
 import { RibbonService } from 'src/app/shared/services/ribbon.service';
 import { MedalService } from 'src/app/shared/services/medal.service';
+import { DecorationService } from 'src/app/shared/services/decoration.service';
 
 @Component({
   selector: 'app-user',
@@ -30,7 +31,7 @@ export class UserComponent implements OnInit {
     @Inject('RankService') private readonly rankService: RankService,
     @Inject('GuardService') private readonly guardService: GuardService,
     @Inject('RibbonService') private readonly ribbonService: RibbonService,
-    // @Inject('DecorationService') private readonly decorationService: DecorationService,
+    @Inject('DecorationService') private readonly decorationService: DecorationService,
     @Inject('MedalService') private readonly medalService: MedalService,
     private readonly route: ActivatedRoute,
     private readonly router: Router
@@ -74,6 +75,15 @@ export class UserComponent implements OnInit {
     try {
       this.medals = await Promise.all(this.user.medalIds.map(async medalId => {
         return this.medalService.get(medalId).toPromise();
+      }));
+    } catch (err) {
+      // TODO: Add a logger for improved debug
+      console.error(err);
+      this.router.navigateByUrl('/regiment');
+    }
+    try {
+      this.decorations = await Promise.all(this.user.decorationIds.map(async decorationId => {
+        return this.decorationService.get(decorationId).toPromise();
       }));
     } catch (err) {
       // TODO: Add a logger for improved debug
