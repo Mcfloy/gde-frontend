@@ -97,7 +97,7 @@
         <h3>{{ guard.name }}</h3>
         <ul>
           <li *ngFor="let user of getUsersOfGuard(guard.id)">
-            <a [routerLink]="'/user/'+ user.id">{{ user.name }}</a>
+            <a [routerLink]="'/user/'+ user.discordId">{{ user.name }}</a>
           </li>
         </ul>
       </li>

@@ -64,27 +64,36 @@ export class UserComponent implements OnInit {
       this.router.navigateByUrl('/regiment');
     }
     try {
-      this.ribbons = await Promise.all(this.user.ribbonIds.map(async ribbonId => {
-        return this.ribbonService.get(ribbonId).toPromise();
-      }));
+      this.ribbons = [];
+      if (this.user.ribbonIds) {
+        for await (const ribbonId of this.user.ribbonIds) {
+          this.ribbons.push(await this.ribbonService.get(ribbonId).toPromise());
+        }
+      }
     } catch (err) {
       // TODO: Add a logger for improved debug
       console.error(err);
       this.router.navigateByUrl('/regiment');
     }
     try {
-      this.medals = await Promise.all(this.user.medalIds.map(async medalId => {
-        return this.medalService.get(medalId).toPromise();
-      }));
+      this.medals = [];
+      if (this.user.medalIds) {
+        for await (const medalId of this.user.medalIds) {
+          this.medals.push(await this.medalService.get(medalId).toPromise());
+        }
+      }
     } catch (err) {
       // TODO: Add a logger for improved debug
       console.error(err);
       this.router.navigateByUrl('/regiment');
     }
     try {
-      this.decorations = await Promise.all(this.user.decorationIds.map(async decorationId => {
-        return this.decorationService.get(decorationId).toPromise();
-      }));
+      this.decorations = [];
+      if (this.user.decorationIds) {
+        for await (const decorationId of this.user.decorationIds) {
+          this.decorations.push(await this.decorationService.get(decorationId).toPromise());
+        }
+      }
     } catch (err) {
       // TODO: Add a logger for improved debug
       console.error(err);

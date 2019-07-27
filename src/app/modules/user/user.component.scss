@@ -4,10 +4,16 @@
 }
 
 .avatar {
-  border-radius: 64px;
+  max-width: 160px;
+  max-height: 160px;
+  border-radius: 80px;
   font-size: 0;
   overflow: hidden;
   margin-right: 20px;
+  img {
+    max-width: 160px;
+    max-height: 160px;
+  }
 }
 
 h2 {
