@@ -1,9 +1,7 @@
 import { RibbonService } from 'src/app/shared/services/ribbon.service';
 import { Injectable, Inject } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { Ribbon } from 'src/app/shared/models/Ribbon';
-import { UserService } from 'src/app/shared/services/user.service';
+import { Ribbon } from 'src/app/shared/models/ribbon';
 
 @Injectable()
 export class MockRibbonService implements RibbonService {
@@ -167,7 +165,7 @@ export class MockRibbonService implements RibbonService {
     throw new Error('Method not implemented.');
   }
 
-  delete (id: number): Observable<Ribbon> {
+  delete (id: number): Observable<boolean> {
     throw new Error('Method not implemented.');
   }
 }

@@ -6,7 +6,7 @@ import { Rank } from 'src/app/shared/models/rank';
 import { RankService } from 'src/app/shared/services/rank.service';
 import { Guard } from 'src/app/shared/models/guard';
 import { GuardService } from 'src/app/shared/services/guard.service';
-import { Ribbon } from 'src/app/shared/models/Ribbon';
+import { Ribbon } from 'src/app/shared/models/ribbon';
 import { Decoration } from 'src/app/shared/models/decoration';
 import { Medal } from 'src/app/shared/models/medal';
 import { RibbonService } from 'src/app/shared/services/ribbon.service';

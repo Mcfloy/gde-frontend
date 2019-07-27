@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { RibbonService } from 'src/app/shared/services/ribbon.service';
-import { Ribbon } from 'src/app/shared/models/Ribbon';
+import { Ribbon } from 'src/app/shared/models/ribbon';
 import { RibbonCategory } from 'src/app/shared/models/ribbon-category';
 import { RibbonCategoryService } from 'src/app/shared/services/ribbon-category.service';
 

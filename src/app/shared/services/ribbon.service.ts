@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { Ribbon } from '../models/Ribbon';
+import { Ribbon } from '../models/ribbon';
 
 export interface RibbonService {
   all (): Observable<Ribbon[]>;
@@ -10,5 +10,5 @@ export interface RibbonService {
 
   put (updatedRibbon: Ribbon): Observable<Ribbon>;
 
-  delete (id: number): Observable<Ribbon>;
+  delete (id: number): Observable<boolean>;
 }

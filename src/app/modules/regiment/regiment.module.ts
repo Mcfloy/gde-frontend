@@ -5,7 +5,7 @@ import { RegimentRoutingModule } from './regiment-routing.module';
 import { MaterialModule } from 'src/app/shared/libs/material/material.module';
 import { MockGuardService } from 'src/app/core/mocks/mock.guard.service';
 import { MockRankService } from 'src/app/core/mocks/mock.rank.service';
-import { MockUserService } from 'src/app/core/mocks/mock.user.service';
+import { DefaultUserService } from 'src/app/core/services/default.user.service';
 
 @NgModule({
   declarations: [RegimentComponent],
@@ -17,7 +17,7 @@ import { MockUserService } from 'src/app/core/mocks/mock.user.service';
   providers: [
     { provide: 'GuardService', useClass: MockGuardService },
     { provide: 'RankService', useClass: MockRankService },
-    { provide: 'UserService', useClass: MockUserService }
+    { provide: 'UserService', useClass: DefaultUserService }
   ]
 })
 export class RegimentModule { }
